@@ -1,5 +1,5 @@
 # Overview
-This project is a design for software implementation of a university student registration management system.
+This project is a design for software implementation of a university's student registration management system.
 
 # Conceptual model
 
