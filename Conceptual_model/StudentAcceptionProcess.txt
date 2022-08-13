@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+:Customer: as bob
+:Acception department: as accDep
+:Register department: as regDep
+:Money Department: as moneyDep
+
+Package Processes {
+  (Order to register) as order
+  (Register to students database) as regdata
+  (Check grades) as acception
+  (Updates customer grades) as validation
+  (Charge student) as charge
+  (Update student debt) as updebt
+}
+note bottom of Processes
+  Processes of a customer
+  ordering to register to the university
+  untill registered and charged
+end note
+bob --> order
+accDep --> acception
+accDep --> validation
+regDep --> regdata
+moneyDep --> charge
+moneyDep --> updebt
+@enduml

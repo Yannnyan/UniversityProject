@@ -1,0 +1,15 @@
+@startuml
+"client" --> "Orders to sign into university"
+if "New Customer" then
+
+  [true] if "Check valid grades" then
+  --> [true] "Accept student"
+  --> "Register Database"
+  else
+  --> [false] "Decline order and advice customer"
+  endif
+else
+--> [false] Decline student
+endif
+
+@enduml
