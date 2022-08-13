@@ -4,7 +4,7 @@ This project is a design for software implementation of a university management 
 # Conceptual model
 
 
-<p><b>Process of acception of a student:</b></p> </br>
+<p><b>Process of acception of a customer:</b></p> </br>
 <img src ="https://github.com/Yannnyan/UniversityProject/blob/main/Conceptual_model/StudentAcceptionProcess.png" alt="Acception process"> </br>
-<b>Process of registration of a student:</b> </br>
+<b>Process of registration of a customer:</b> </br>
 <img src="https://github.com/Yannnyan/UniversityProject/blob/main/Conceptual_model/StudentRegisterProcess.png" alt="Registration process">
