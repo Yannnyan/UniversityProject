@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace first_project.Data
 {
-    internal class Debts
+    public class Debts
     {
         private double studyDebt;
         private double headDebt;

@@ -1,70 +1,61 @@
 ﻿using first_project.Data;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UniversityProject.DAL;
+using System.Data;
+using UniversityProject.Debug;
 
-namespace first_project.DAL
+namespace UniversityProject.DAL
 {
-    internal class StudentDA
+    public class StudentDA
     {
-        SqlConnection conn = null;
-        public StudentDA ()
+        public static void createStudentTable()
         {
-            conn = SingleConnection.createConnection();
+            SqlConnection conn = new SqlConnection(ConnData.conn_string);
+            string sql = @"CREATE TABLE Students(
+                            id int NOT NULL PRIMARY KEY,
+                            FirstName nchar(10) NULL
+                            );";
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
-
-        public void insertStudent(Student student)
+        public static void insertStudent(Student student)
         {
+            SqlParameter stid = new SqlParameter("@stID", SqlDbType.Int);
+            stid.Value = student.getID();
+            SqlParameter stFirstName = new SqlParameter(@"stFirstName", SqlDbType.VarChar, 10);
+            stFirstName.Value = student.getName();
             
-            if(!TableDDL.TableExists("Students"))
+            string sql = @"INSERT INTO STUDENTS (id, firstName) VALUES (@stID, @stFirstName)";
+            
+            using (SqlConnection conn = new SqlConnection(ConnData.conn_string))
             {
-                TableDDL.createTable("Students");
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.Add(stid);
+                    cmd.Parameters.Add(stFirstName);
+                    int affectedRows = cmd.ExecuteNonQuery();
+                    Logger.Log($"Insert Student With Id: {student.getID()}, Rows Affected: " + affectedRows);
+                }
             }
-            /**  Entering the details into the Students table **/
-            try
-            {
-                string commandString = "Insert into Students (id, Name)" +
-                "Values (@id, @name);";
-                // defining parameters
-                SqlCommand cmd = new SqlCommand(commandString, conn);
-                SqlParameter name = new SqlParameter();
-                SqlParameter id = new SqlParameter();
-                id.ParameterName = "id";
-                id.Value = student.getID();
-                name.ParameterName = "name";
-                name.Value = student.getName();
-                cmd.Parameters.Add(id); // adding
-                cmd.Parameters.Add(name);
-                // exec
-                cmd.ExecuteNonQuery();
-                
-            }
-            catch
-            {
-                throw (new InvalidDataException("failed inserting into students"));
-            }
+       
+            
         }
-        public void deleteStudent(int id)
+        public static void deleteStudent(int id)
         {
-            try
+            SqlParameter stid = new SqlParameter("@id", SqlDbType.Int);
+            stid.Value = id;
+            string sql = @"DELETE FROM STUDENTS WHERE id = @id";
+            using (SqlConnection conn = new SqlConnection(ConnData.conn_string))
             {
-                string sqlString = "Delete From Students where id = @id;";
-                
-                SqlCommand cmd = new SqlCommand(sqlString, conn);
-                SqlParameter param = new SqlParameter();
-                param.ParameterName = "id";
-                param.Value = id;
-                cmd.Parameters.Add(param);
-                // exec
-                cmd.ExecuteNonQuery();
-            }
-            catch
-            {
-                throw (new InvalidDataException("Student id does not exist"));
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.Add(stid);
+                    Logger.Log($"Delete {id}, Rows affected: " + cmd.ExecuteNonQuery());
+
+                }
             }
 
         }

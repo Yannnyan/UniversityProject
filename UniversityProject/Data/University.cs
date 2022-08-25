@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace first_project.Data
 {
-    internal class University
+    public class University
     {
         private Dictionary<int, Student> students;
         public University()

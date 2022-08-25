@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace first_project.Data
 {
-    internal class Student
+    public class Student
     {
         private string name;
         private int id;

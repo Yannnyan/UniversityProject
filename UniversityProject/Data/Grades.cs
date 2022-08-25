@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace first_project.Data
 {
     
-    internal class Grades
+    public class Grades
     {
         private IDictionary<string, int> grades;
 
