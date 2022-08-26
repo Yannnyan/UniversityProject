@@ -1,0 +1,28 @@
+@startuml
+title Proxy design pattern for Data Access Layer
+rectangle {
+  (View) as view
+}
+rectangle {
+  (Business Logic) as logic
+}
+component {
+  (DA) as proxy
+  (StudentDA) as stDA
+  (DebtsDA) as debtsDA
+  (GradesDA) as gradesDA
+}
+rectangle {
+  database "SQL Server" as db
+}
+view --> logic
+logic --> proxy
+proxy --> stDA
+proxy --> debtsDA
+proxy --> gradesDA
+stDA --> db
+debtsDA --> db
+gradesDA --> db
+
+
+@enduml
