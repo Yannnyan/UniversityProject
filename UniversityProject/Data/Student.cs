@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace first_project.Data
+namespace UniversityProject.Data
 {
     public class Student
     {
-        private string name;
-        private int id;
-        private Grades grades;
-        private Debts debts;
+        private string nameValue;
+        public string name { get { return nameValue; } private set { nameValue = value; } }
+        private int idValue;
+        public int id { get { return idValue; } private set { idValue = value; } }
+        private ArrayList gradesValue;
+        public ArrayList grades { get { return gradesValue; } private set { gradesValue = value; } }
+        private ArrayList debtsValue;
+        public ArrayList debts { get { return debtsValue; } private set { debtsValue = value; } }
         
 
         public Student(int id, string name)
@@ -22,32 +27,31 @@ namespace first_project.Data
             }
             this.id = id;
             this.name = name;
-            grades = new Grades();
-            debts = new Debts();
-            
+            grades = new ArrayList();
+            debts = new ArrayList();
+                    
         }
-
-        public Grades getGrades()
+        public Student(int id, string name, ArrayList grades, ArrayList debts)
         {
-            if(grades.exists())
+            if (name is null || grades is null || debts is null)
             {
-                return grades;
+                throw new ArgumentNullException("parameter is null");
             }
-            return null;
+            this.id = id;
+            this.name = name;
+            this.grades = grades;
+            this.debts = debts;
         }
-        public Debts getDebts()
+        // inserts a new grade into the arraylist
+        // not updates the db
+        public void addGrade(Grade grade)
         {
-            return debts;
+            this.grades.Add(grade);
         }
-        public int getID()
+        public void addDebt(Debt debt)
         {
-            return id;
+            this.debts.Add(debt);
         }
-        public string getName()
-        {
-            return name;
-        }
-
 
     }
 }
