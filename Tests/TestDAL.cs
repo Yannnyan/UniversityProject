@@ -1,6 +1,3 @@
-using UniversityProject.Data;
-using UniversityProject.DAL;
-
 namespace Tests
 {
     [TestClass]

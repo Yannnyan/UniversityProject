@@ -48,7 +48,7 @@ namespace UniversityProject.DAL
             SqlParameter[] parameters = getParameters(transactionID, studentID, amount, description);
 
             string sql = @"INSERT INTO DEBTS (transactionID, studentID, amount, detail) 
-                            VALUES (@transactionID, @studentId, @amount, @descrip)";
+                            VALUES (@transactionID, @studentId, @amount, @detail)";
             DAManagement.execNonQ(sql, parameters);
         }
         public static void deleteDebt(int transactionID)

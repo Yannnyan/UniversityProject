@@ -8,6 +8,7 @@ namespace UniversityProject.DAL
 {
     public class StudentDA
     {
+       
         
         public static void create_table()
         {
@@ -20,7 +21,8 @@ namespace UniversityProject.DAL
         }
         public static void truncate_table()
         {
-            string sql = "TRUNCATE TABLE STUDENTS;";
+            string sql = @"DELETE FROM TABLENAME
+                            DBCC CHECKIDENT('TestUniversity.dbo.Students', RESEED, 0)";
             DAManagement.execNonQ(sql, new SqlParameter[] { });
         }
         public static void createStudentTable()
@@ -39,7 +41,9 @@ namespace UniversityProject.DAL
         {
             SqlParameter[] parameters = new SqlParameter[2];
             parameters[0] = new SqlParameter("@studentID", SqlDbType.Int);
+            parameters[0].Value = studentId;
             parameters[1] = new SqlParameter("@studentName", SqlDbType.VarChar, 10);
+            parameters[1].Value = studentName;
             return parameters;
         }
         public static void insertStudent(int studentID, string studentName)

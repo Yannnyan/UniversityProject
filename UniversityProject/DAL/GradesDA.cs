@@ -36,9 +36,13 @@ namespace UniversityProject.DAL
         {
             SqlParameter[] parameters = new SqlParameter[4];
             parameters[0] = new SqlParameter("@gradeID", SqlDbType.Int);
+            parameters[0].Value = gradeID;
             parameters[1] = new SqlParameter("@courseName", SqlDbType.VarChar, 15);
+            parameters[1].Value = courseName;
             parameters[2] = new SqlParameter("@studentID", SqlDbType.Int);
+            parameters[2].Value = studentID;
             parameters[3] = new SqlParameter("@grade", SqlDbType.Int);
+            parameters[3].Value = grade;
             return parameters;
         }
 
