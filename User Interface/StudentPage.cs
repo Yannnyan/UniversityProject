@@ -26,5 +26,10 @@ namespace UniversityProject.View
         {
 
         }
+
+        private void homePageButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace Business
 {
     public class MoneyDepartment
     {
+
     }
 }

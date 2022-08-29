@@ -32,7 +32,7 @@
   </ItemGroup>
   <PropertyGroup>
     <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
   <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />

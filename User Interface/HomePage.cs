@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
+using User_Interface;
 
 namespace UniversityProject.View
 {
@@ -17,12 +19,42 @@ namespace UniversityProject.View
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void studentButton_Click(object sender, EventArgs e)
+        {
+            var frm = new StudentPage();
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void moneyDepartmentButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acceptionDepartmentButton_Click(object sender, EventArgs e)
+        {
+            var frm = new AcceptionDepartmentPage();
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
+        }
+
+        private void registerDepartmentButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
         {
 
         }

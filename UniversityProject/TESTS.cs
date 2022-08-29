@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using UniversityProject.Data;
 using UniversityProject.DAL;
 using System.Collections;
-using Xunit;
 
 namespace UniversityProject
 {
@@ -59,7 +58,6 @@ namespace UniversityProject
             {
                 da.insertObject(student);
             }
-            Assert.True(true);
         }
         private void TestInsertDebt()
         {
@@ -84,7 +82,6 @@ namespace UniversityProject
                 da.insertObject(debt);
             }
             
-            Assert.True(true);
             
         }
         private void TestInsertGrade()
@@ -114,7 +111,6 @@ namespace UniversityProject
                 da.insertObject(grade);
             }
 
-            Assert.True(true);
 
         }
         /* TEST DELETE OBJECT*/
