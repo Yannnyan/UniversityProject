@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace first_project.Data
+namespace UniversityProject.Data
 {
     public class University
     {
@@ -16,7 +16,7 @@ namespace first_project.Data
 
         public void addStudent(Student student)
         {
-            students.Add(student.getID(), student);
+            students.Add(student.id, student);
         }
         public Student getStudent(int id)
         {
