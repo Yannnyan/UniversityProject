@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Classes.Data;
-using UniversityProject.Debug;
+using DataAccess.Debug;
 using System.Collections;
 
-namespace UniversityProject.DAL
+namespace DataAccess.DAL
 {
     public class DebtsDA
     {

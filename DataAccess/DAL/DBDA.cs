@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace UniversityProject.DAL
+namespace DataAccess.DAL
 {
     internal class DBDA
     {

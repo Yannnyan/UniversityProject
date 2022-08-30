@@ -8,7 +8,7 @@ using Classes.Data;
 using System.Data;
 using System.Collections;
 
-namespace UniversityProject.DAL
+namespace DataAccess.DAL
 {
     public class GradesDA
     {

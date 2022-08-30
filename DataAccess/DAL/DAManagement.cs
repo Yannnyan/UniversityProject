@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Classes.Data;
-using UniversityProject.Debug;
+using DataAccess.Debug;
 
-namespace UniversityProject.DAL
+namespace DataAccess.DAL
 {
     public class DAManagement
     {

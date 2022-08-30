@@ -1,10 +1,10 @@
 ﻿using Classes.Data;
 using System.Data.SqlClient;
 using System.Data;
-using UniversityProject.Debug;
+using DataAccess.Debug;
 using System.Collections;
 
-namespace UniversityProject.DAL
+namespace DataAccess.DAL
 {
     public class StudentDA
     {
@@ -15,28 +15,23 @@ namespace UniversityProject.DAL
             string sql = @"CREATE TABLE [dbo].[Students] (
                             id        INT        NOT NULL,
                             FirstName NCHAR (10) NULL,
+                            Status NCHAR (12) NOT NULL,
                             PRIMARY KEY CLUSTERED (id ASC)
                             );";
+            DAManagement.execNonQ(sql, new SqlParameter[] { });
+        }
+        public static void dropTable()
+        {
+            string sql = @"DROP TABLE Students;";
             DAManagement.execNonQ(sql, new SqlParameter[] { });
         }
         public static void truncate_table()
         {
             string sql = @"DELETE FROM TABLENAME
-                            DBCC CHECKIDENT('TestUniversity.dbo.Students', RESEED, 0)";
+                            DBCC CHECKIDENT('TestUniversity.dbo.Students', RESEED, 0);";
             DAManagement.execNonQ(sql, new SqlParameter[] { });
         }
-        public static void createStudentTable()
-        {
-            SqlConnection conn = new SqlConnection(ConnData.conn_string);
-            string sql = @"CREATE TABLE Students(
-                            id int NOT NULL PRIMARY KEY,
-                            FirstName nchar(10) NULL
-                            );";
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
+       
         private static SqlParameter[] getParameters(int studentId, string studentName)
         {
             SqlParameter[] parameters = new SqlParameter[2];

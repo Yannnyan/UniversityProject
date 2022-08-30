@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UniversityProject.Data;
-using UniversityProject.DAL;
+using Classes.Data;
+using DataAccess.DAL;
 using System.Collections;
 
 namespace UniversityProject
@@ -12,17 +12,15 @@ namespace UniversityProject
     internal class TESTS
     {
         ArrayList objectList;
-        DA da;
         TESTS()
         {
-            da = new DA();
             objectList = new ArrayList();
         }
         void clearObjects()
         {
             foreach (object obj in objectList)
             {
-                da.deleteObject(obj);
+                DA.deleteObject(obj);
             }
             objectList.Clear();
         }
@@ -34,14 +32,12 @@ namespace UniversityProject
             }
 
         }
-        //public static void Main()
-        //{
-        //    TESTS tests = new TESTS();
-        //    tests.TestInsertStudent();
-        //    tests.TestInsertDebt();
-        //    tests.TestInsertGrade();
-        //    tests.clearObjects();
-        //}
+        public static void Main()
+        {
+            //TESTS tests = new TESTS();
+            StudentDA.dropTable();
+            StudentDA.create_table();
+        }
 
 
         /* TEST DAL*/
@@ -56,7 +52,7 @@ namespace UniversityProject
             addObjects(students);
             foreach(Student student in students)
             {
-                da.insertObject(student);
+                DA.insertObject(student);
             }
         }
         private void TestInsertDebt()
@@ -75,11 +71,11 @@ namespace UniversityProject
             
             foreach (Student student in students)
             {
-                da.insertObject(student);
+                DA.insertObject(student);
             }
             foreach (Debt debt in debts)
             {
-                da.insertObject(debt);
+                DA.insertObject(debt);
             }
             
             
@@ -104,11 +100,11 @@ namespace UniversityProject
             addObjects(students);
             foreach(Student student in students)
             {
-                da.insertObject(student);
+                DA.insertObject(student);
             }
             foreach(Grade grade in grades)
             {
-                da.insertObject(grade);
+                DA.insertObject(grade);
             }
 
 

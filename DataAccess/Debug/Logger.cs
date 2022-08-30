@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversityProject.Debug
+namespace DataAccess.Debug
 {
     public class Logger
     {

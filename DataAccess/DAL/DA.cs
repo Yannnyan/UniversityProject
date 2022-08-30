@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Classes.Data;
 
-namespace UniversityProject.DAL
+namespace DataAccess.DAL
 {
     /**
      * This class is a proxy for the Data Access layer
@@ -13,12 +13,12 @@ namespace UniversityProject.DAL
     public class DA : DAInterface
     {
        
-        public void createDB(string name)
+        public static void createDB(string name)
         {
             DBDA.createDB(name);
         }
         
-        public void deleteObject(object obj)
+        public static void deleteObject(object obj)
         {
             if (obj is Student)
             {
@@ -37,12 +37,12 @@ namespace UniversityProject.DAL
             }
         }
 
-        public object getObject(int primaryKey, string tableName)
+        public static object getObject(int primaryKey, string tableName)
         {
             throw new NotImplementedException();
         }
 
-        public void insertObject(object obj)
+        public static void insertObject(object obj)
         {
             if (obj is Student)
             {
@@ -63,7 +63,7 @@ namespace UniversityProject.DAL
             }
         }
 
-        public void updateObject(object obj)
+        public static void updateObject(object obj)
         {
             throw new NotImplementedException();
         }
