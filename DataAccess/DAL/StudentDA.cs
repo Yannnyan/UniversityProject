@@ -1,4 +1,4 @@
-﻿using UniversityProject.Data;
+﻿using Classes.Data;
 using System.Data.SqlClient;
 using System.Data;
 using UniversityProject.Debug;

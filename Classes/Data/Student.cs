@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversityProject.Data
+namespace Classes.Data
 {
     public class Student
     {

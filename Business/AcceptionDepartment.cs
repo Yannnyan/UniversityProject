@@ -1,7 +1,20 @@
-﻿namespace Business
+﻿using Classes.Data;
+
+namespace Business
 {
-    public class Class1
+    public class AcceptionDepartment
     {
+        Student student;
+
+
+
+
+
+
+
+
+
+
 
     }
 }

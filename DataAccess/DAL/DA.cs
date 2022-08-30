@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UniversityProject.Data;
+using Classes.Data;
 
 namespace UniversityProject.DAL
 {
@@ -17,7 +17,7 @@ namespace UniversityProject.DAL
         {
             DBDA.createDB(name);
         }
-
+        
         public void deleteObject(object obj)
         {
             if (obj is Student)
