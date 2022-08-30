@@ -1,0 +1,102 @@
+Insert 1, Rows Affected: 1
+Insert grade, Affected Rows: 1
+Delete Grade With Id And Course: 1 Science, Number Of Rows Affected: 1
+Delete 1, Rows affected: 1
+Insert Student With Id: 1, Rows Affected: 1
+Insert Debt With Transaction ID = 1, Number Of Rows Affected: 1
+Delete Debt With Transaction Id = 1, Number Of Rows Affected: 1
+Execute non query with parameters:  @studentID @amount @descrip @transactionID Number of rows affected: 1
+Execute non query with parameters:  @transactionID Number of rows affected: 1
+Execute non query with parameters:  @stID stFirstName Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @stID stFirstName Number of rows affected: 1
+Execute non query with parameters:  @courseName @stID @grade @gradeID Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  Number of rows affected: -1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID @amount @studentID @detail Number of rows affected: 1
+Execute non query with parameters:  @transactionID Number of rows affected: 1
+Execute non query with parameters:  @transactionID Number of rows affected: 1
+Execute non query with parameters:  @transactionID Number of rows affected: 1
+Execute non query with parameters:  @transactionID Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @studentID @studentName Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID @courseName @studentID @grade Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @gradeID Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
+Execute non query with parameters:  @id Number of rows affected: 1
